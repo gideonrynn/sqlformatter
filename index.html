@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Formatter</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper-two">
+            <div class="input-section">            
+                <div class="text-input">
+                    <!-- trims whitespace on entry with oninput, versus onchange which requires clicking away -->
+                    <textarea rows="20" cols="50" id="input" placeholder="Input: &#10 Select * &#10 from input &#10 where input = input" oninput="trimInput()"></textarea>
+                </div>
+            </div>
+            <div class="button-options">
+                <div id="button-comment"> <p></p></div>
+                <button type="button clear" id="clear" onclick="clearInput()">Clear</button>
+                
+                <button type="button" id="leading-commas" onclick="handleCommas('leading')">Leading Commas</button>
+                <button type="button" id="leading-commas" onclick="handleCommas('closing')">Closing Commas</button>
+                <!-- <button type="button" id="placeholder" onclick="placeholder()">Placeholder</button> -->
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
